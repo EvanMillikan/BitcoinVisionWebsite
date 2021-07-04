@@ -1,0 +1,116 @@
+/* App.vue */
+.app {
+    display: grid;
+    grid-template-areas: "topbar" "topbarnav" "content" "bottombar";
+    grid-template-rows: 20px 50px 1fr 40px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    height: 100vh;
+    width: 100vw;
+}
+
+.top-bar {
+    grid-area: topbar;
+    background-color: #f7931a;
+}
+
+.top-bar__nav {
+    display: grid;
+    grid-area: topbarnav;
+    grid-template-columns: max-content 1fr;
+}
+
+.top-bar__nav--left {
+    padding: 0vw 2vw;
+    font-family: "Ubuntu", sans-serif;
+    float: left;
+    font-size: 35px;
+    font-weight: 800;
+    color: #4d4d4d;
+}
+.top-bar__nav--right {
+    align-self: center;
+    text-align: right;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 15px;
+    padding: 0px 5vw;
+    letter-spacing: 1px;
+}
+
+.top-bar__nav--right a {
+    text-decoration: none !important;
+}
+
+.content {
+    grid-area: content;
+}
+
+.bottom-bar {
+    grid-area: bottombar;
+}
+
+.bottom-bar__image {
+    position: relative;
+    padding: 40px 0px 0px 0px;
+    background-size: cover;
+    text-align: center;
+    background: url(./assets/overview-bg.svg) top;
+}
+
+.top-bar__nav--right a {
+    font-weight: bold;
+    color: #1a3263;
+}
+
+.top-bar__nav--right a.router-link-exact-active {
+    color: #f7931a;
+}
+
+
+/* Home.vue */
+.container {
+    padding-top: 100px;
+    font-family: "Titillium Web", sans-serif;
+}
+.home {
+    display: grid;
+    grid-template-areas: "dropdrown graph";
+    grid-template-columns: 10vh 1fr;
+}
+
+.left {
+    grid-area: dropdown;
+}
+
+.right {
+    grid-area: graph;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 40px;
+    color: #4d4d4d;
+}
+
+.active-list {
+    background-color: rgb(236, 245, 254) !important;
+    font-weight: 700 !important;
+    border-radius: 5px !important;
+    color: #f7931a !important;
+}
+
+/* About.vue */
+.about-page {
+    font-family: "Titillium Web", sans-serif;
+}
+
+.about-page__list {
+    font-size: 30px !important;
+}
+
+.active-sublist {
+    color: #f7931a !important;
+}
